@@ -12,12 +12,22 @@
 # Add a button to the window with the text "Click me!"
 # Display an information message box with the text "Hello, PyQt!" when the button is clicked
 
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QMessageBox
+from PyQt5.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QLabel,
+    QLineEdit,
+    QPushButton,
+    QMessageBox,
+    QVBoxLayout,
+    QWidget,
+)
 import sys
 
 
 def on_button_click():
-    QMessageBox.information(window, "Information", "Hello, PyQt")
+    name = name_input.text()
+    QMessageBox.information(window, "Information", f"Hello, {name}!")
 
 
 # Create the application object
@@ -28,11 +38,26 @@ window = QMainWindow()
 window.setWindowTitle("My First PyQt App")
 window.setGeometry(300, 200, 400, 300)
 
+# Set up the layout
+layout = QVBoxLayout()
+
+# Create the label
+label = QLabel("Enter your name:")
+layout.addWidget(label)
+
+# Create the line edit
+name_input = QLineEdit()
+layout.addWidget(name_input)
+
 # Creating a button
 button = QPushButton("Click me!", window)
 button.setToolTip("This is an example button")
 button.move(150, 150)
 button.clicked.connect(on_button_click)
+
+central_widget = QWidget()
+central_widget.setLayout(layout)
+window.setCentralWidget(central_widget)
 
 # Show the window
 window.show()
