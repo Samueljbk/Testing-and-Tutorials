@@ -2,7 +2,6 @@
 # Add two methods: area and circumference that return the area and circumference of the circle, respectively.
 # Use the constant pi from the math module.
 import math
-import os
 
 
 class Circle:
