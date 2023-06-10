@@ -16,4 +16,3 @@ if latest_event_time.date() == datetime.date.today():
     print("Pushed Today")
 
 print(latest_event)
-print(latest_event)
