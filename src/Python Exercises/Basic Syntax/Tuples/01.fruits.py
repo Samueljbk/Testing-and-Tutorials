@@ -10,8 +10,16 @@
 
 fruits = ("apple", "banana", "orange", "grape", "mango")
 
+more_fruits = fruits + ("pineapple", "kiwi")
+
 fruits[2]
+count = 0
 
 for fruit in fruits:
     if fruit == "grape":
         print(f"Index of grape is {fruits.index(fruit)}")
+
+for fruit in fruits:
+    if fruit == "banana":
+        count += 1
+print(count)
