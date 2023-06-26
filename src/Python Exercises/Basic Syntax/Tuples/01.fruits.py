@@ -19,6 +19,8 @@ for fruit in fruits:
     if fruit == "grape":
         print(f"Index of grape is {fruits.index(fruit)}")
 
+# Could index just the name of what's being searched for e.g. fruits.index("grape")
+
 for fruit in fruits:
     if fruit == "banana":
         count += 1
