@@ -7,6 +7,7 @@
 # Check if the color 'blue' is present in the colors set.
 #
 # Find the union of two sets: colors and another set containing 'pink', 'white', and 'black'.
+#
 
 colours = {"red", "blue", "green", "yellow", "orange"}
 
