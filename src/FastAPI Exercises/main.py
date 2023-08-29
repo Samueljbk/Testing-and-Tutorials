@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from pathlib import Path
 from pydantic import BaseModel
 
@@ -17,13 +17,13 @@ def hello_world():
 
 
 @app.get("/items/{item_id}")
-def obtain_item_id():
-    return "{item_id}"
+def obtain_item_id(item_id: int):
+    return {"item_id": item_id}
 
 
-@app.get("/users/")
+@app.get("/users/{username}")
 def view_profile(username: str):
-    return {"You're viewing {username}'s profile."}
+    return {f"You're viewing {username}'s profile."}
 
 
 @app.post("/users/create")
