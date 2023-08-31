@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pathlib import Path
 from pydantic import BaseModel
+import numpy as np
 
 app = FastAPI()
 
