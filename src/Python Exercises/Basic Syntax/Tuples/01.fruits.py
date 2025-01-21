@@ -25,3 +25,5 @@ for fruit in fruits:
     if fruit == "banana":
         count += 1
 print(count)
+
+# test
